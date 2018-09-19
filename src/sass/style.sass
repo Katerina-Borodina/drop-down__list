@@ -1,0 +1,148 @@
+*
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+html
+  font-size: 10px
+
+
+body
+  margin: 0
+  padding: 0
+  font-family: 'Ubuntu', sans-serif
+  font-size: 10px
+
+a
+  text-decoration: none
+
+li
+  list-style: none
+
+*, :focus
+    outline: none
+
+.header
+  background-color: #050135
+
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    min-height: 4.44444vw
+  &__navigation
+    .btn-profile
+      color: #bdc8e7
+      line-height: 1.63
+      border-radius: 20px
+      background-color: #1a206b
+      text-decoration: none
+      display: inline-block
+      font-size: .88889vw
+      font-weight: 300
+      padding:
+        top: .38889vw
+        left: 1.38889vw
+        right: 1.38889vw
+        bottom: .38889vw
+  &__menu
+    position: relative
+    background-color: #0f144e
+    &::after
+      content: ""
+      position: absolute
+      display: block
+      background-color: #0f144e
+      width: 100%
+      height: 100%
+      z-index: 0
+      top: 0
+      right: 0
+      transform: translateX(100%)
+    &::before
+      content: ""
+      position: absolute
+      display: block
+      background-color: #0f144e
+      width: 100%
+      height: 100%
+      z-index: 0
+      top: 0
+      left: 0
+      transform: translateX(-100%)
+    .menu
+      display: flex
+      align-items: center
+      justify-content: space-between
+      padding-left: 10px
+      margin: 0
+      li
+        position: relative
+        display: inline-block
+        line-height: 3.33333vw
+        &:hover
+          .sub-menu
+            opacity: 1
+            visibility: visible
+            z-index: 10
+          a
+            color: #FFFFFF
+        a
+          font-weight: 300
+          font-size: .88889vw
+          color: #bdc8e7
+          line-height: 1.63
+          vertical-align: middle
+          cursor: pointer
+      .parent
+        a
+          cursor: default!important
+          pointer-events: none
+        .sub-menu
+          display: flex
+          flex-direction: column
+          position: absolute
+          opacity: 0
+          visibility: hidden
+          z-index: -1
+          top: 100%
+          left: 0
+          line-height: 1.5
+          border-radius: 0 0 4px 4px
+          background-color: #0f144e
+          transition: .2s
+          white-space: nowrap
+          padding-left: 0
+          li
+            margin:
+              left: 1.11111vw
+              right: 1.11111vw
+              top: .63333vw
+              bottom: .63333vw
+            padding-right: 1.11111vw
+            position: relative
+            overflow: hidden
+            &:hover
+              a
+                color: #fff
+                right: -.65556vw
+                padding-left: 3px
+              span
+                visibility: visible
+                z-index: 10
+                left: -.55556vw
+                width: .55556vw
+                height: .44444vw
+            a
+              font-size: .88889vw
+              color: #bdc8e7
+              display: block
+              position: relative
+              width: 100%
+              right: 0
+              transition: .4s
+              span
+                visibility: hidden
+                z-index: -1
+                position: absolute
+
